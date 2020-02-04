@@ -1,5 +1,5 @@
 # redis-template
-自定义封装的一个redis模板
+自定义封装的redis模板
 特点：
 1. lettuce连接池；
 2. fastjson对象序列化；
