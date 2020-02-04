@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+qcz.zone.redis.aspect.AspectRedisTemplate
