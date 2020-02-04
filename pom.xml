@@ -60,7 +60,7 @@
     </dependencies>
 
     <build>
-        <finalName>redis-template</finalName>	<!-- 打包后的包名称，根据工程修改 -->
+        <finalName>qcz-redis</finalName>	<!-- 打包后的包名称，根据工程修改 -->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
