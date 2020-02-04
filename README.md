@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author: qiuchengze
  * @email: eric.qjc@163.com
- * @web: http://www.fast-im.com/
+ * @web: http://www.qcz.zone
  * @create: 2019 - 11 - 19
  */
 
