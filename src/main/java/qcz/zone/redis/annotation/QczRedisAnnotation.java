@@ -14,7 +14,6 @@ import java.lang.annotation.*;
 /**
  * 自定义字段注解（动态注入自定义QczRedisTemplate）
  */
-//@Inherited  // 支持继承
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)

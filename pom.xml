@@ -7,7 +7,6 @@
     <groupId>qcz.zone</groupId>
     <artifactId>qcz-redis</artifactId>
     <version>1.0.0</version>
-
     <name>qcz-redis</name>
     <packaging>jar</packaging>
 

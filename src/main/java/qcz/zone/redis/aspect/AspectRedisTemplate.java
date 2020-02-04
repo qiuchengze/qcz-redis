@@ -7,7 +7,9 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.stereotype.Component;
 import qcz.zone.redis.annotation.QczRedisAnnotation;
 import qcz.zone.redis.constant.RedisDBIndex;
@@ -34,7 +36,8 @@ import java.util.regex.Pattern;
  */
 @Aspect
 @Component
-@ConditionalOnClass(RedisProperties.class)
+@ConditionalOnClass(RedisOperations.class)
+@EnableConfigurationProperties(RedisProperties.class)
 public class AspectRedisTemplate {
     // qczRedisTemplate缓存池
     private static final Map<Integer, QczRedisTemplate> mapQczRedisTemplate = new ConcurrentHashMap<Integer, QczRedisTemplate>();
@@ -44,7 +47,7 @@ public class AspectRedisTemplate {
     private RedisProperties redisProperties;
 
     // 类注解（@QczUtils）切入点
-    @Pointcut(value = "@within(com.qcz.utils.redis.annotation.QczUtils)")
+    @Pointcut(value = "@within(qcz.zone.redis.annotation.QczUtils)")
     public void qczUtils() {}
 
     // 前置通知

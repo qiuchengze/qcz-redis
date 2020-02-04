@@ -12,7 +12,6 @@ import java.lang.annotation.*;
 /**
  * 自定义类注解（用于辅助AOP快速发现自定义字段注解）
  */
-//@Inherited  // 支持继承
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
